@@ -4,89 +4,43 @@ Hero Area
 ===================================== -->
 <section class="hero-area hero-slider-1">
     <div class="sb-slick-slider" data-slick-setting='{
-                            "autoplay": true,
-                            "fade": true,
-                            "autoplaySpeed": 3000,
-                            "speed": 3000,
-                            "slidesToShow": 1,
-                            "dots":true
-                            }'>
-        <div class="single-slide bg-shade-whisper  ">
-            <div class="container">
-                @*<div class="home-content text-center text-sm-left position-relative">
-            <div class="hero-partial-image image-right">
-                <img src="image/bg-images/home-slider-2-ai.png" alt="">
-            </div>
-            <div class="row no-gutters ">
-                <div class="col-xl-6 col-md-6 col-sm-7">
-                    <div class="home-content-inner content-left-side">
-                        <h1>
-                            H.G. Wells<br>
-                            De Vengeance
-                        </h1>
-                        <h2>Cover Up Front Of Books and Leave Summary</h2>
-                        <a href="shop-grid.html" class="btn btn-outlined--primary">
-                            $78.09 - Order Now!
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>*@
-
-
-                @for (int i = 0; i < Model.Sliders.Count; i++)
+        "autoplay": true,
+        "fade": true,
+        "autoplaySpeed": 3000,
+        "speed": 3000,
+        "slidesToShow": 1,
+        "dots": true
+        }'>
+        @for (int i = 0; i < Model.Sliders.Count; i++)
         {
             Slider slider = Model.Sliders[i];
-            <div class="home-content text-center text-sm-left position-relative">
-                <div class="hero-partial-image image-left">
-                    <img src="image/bg-images/home-@slider.Image" alt="">
-                </div>
-                <div class="row align-items-center justify-content-start justify-content-md-end">
-                    <div class="col-lg-6 col-xl-7 col-md-6 col-sm-7">
-                        <div class="home-content-inner content-right-side">
-                            <h1>
-                                @slider.Title1 <br>
-                                @slider.Title2
-                            </h1>
-                            <h2>@slider.Desc</h2>
-                            <a href="@slider.BtnUrl" class="btn btn-outlined--primary">
-                                @slider.BtnText
-                            </a>
+            <div class="single-slide bg-shade-whisper @(i != 0 ? "bg-shade-whisper" : "bg-ghost-white")">
+                <div class="container">
+                    <div class="home-content text-center text-sm-left position-relative">
+                        <div class="hero-partial-image @(i != 0 ? "image-right" : "image-left")">
+                            <img src="image/bg-images/home-@slider.Image" alt="">
                         </div>
-                    </div>
-                </div>
-            </div>
-
-        }
-            </div>
-        </div>
-
-      
-        <div class="single-slide bg-ghost-white">
-            <div class="container">
-                <div class="home-content text-center text-sm-left position-relative">
-                    <div class="hero-partial-image image-left">
-                        <img src="image/bg-images/home-slider-1-ai.png" alt="">
-                    </div>
-                    <div class="row align-items-center justify-content-start justify-content-md-end">
-                        <div class="col-lg-6 col-xl-7 col-md-6 col-sm-7">
-                            <div class="home-content-inner content-right-side">
-                                <h1>
-                                    J.D. Kurtness <br>
-                                    De Vengeance
-                                </h1>
-                                <h2>Cover Up Front Of Books and Leave Summary</h2>
-                                <a href="shop-grid.html" class="btn btn-outlined--primary">
-                                    $78.09 - Learn More
-                                </a>
+                        <div class="row @(i != 0 ? "no-gutters" : "align-items-center justify-content-start justify-content-md-end")">
+                            <div class="col-lg-6 col-xl-7 col-md-6 col-sm-7">
+                                <div class="home-content-inner @(i != 0 ? "content-left-side" : "content-right-side")">
+                                    <h1>
+                                        @slider.Title1 <br>
+                                        @slider.Title2
+                                    </h1>
+                                    <h2>@slider.Desc</h2>
+                                    <a href="@slider.BtnUrl" class="btn btn-outlined--primary">
+                                        @slider.BtnText
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     </div>
 </section>
+
 <!--=================================
 Home Features Section
 ===================================== -->
