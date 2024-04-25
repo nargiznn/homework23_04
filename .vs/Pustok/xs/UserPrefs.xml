@@ -1,36 +1,43 @@
 ﻿<Properties StartupConfiguration="{8489858C-B9C0-447D-A7A2-AB89DF24F2FC}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Pustok PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Pustok/Views/Home/Index.cshtml">
     <Files>
-      <File FileName="Pustok/Data/AppDbContext.cs" Line="12" Column="10" />
-      <File FileName="Pustok/Models/Slider.cs" Line="7" Column="17" />
-      <File FileName="Pustok/Views/Shared/_Layout.cshtml" Line="23" Column="48" />
-      <File FileName="Pustok/Controllers/HomeController.cs" Line="23" Column="6" />
-      <File FileName="Pustok/Migrations/20240422204747_SlidersTableCreated.cs" Line="1" Column="1" />
-      <File FileName="Pustok/ViewModels/HomeViewModel.cs" Line="8" Column="50" />
-      <File FileName="Pustok/Views/Home/Index.cshtml" Line="37" Column="3" />
-      <File FileName="Pustok/Views/_ViewImports.cshtml" Line="2" Column="25" />
+      <File FileName="Pustok/Data/AppDbContext.cs" Line="17" Column="57" />
+      <File FileName="Pustok/Models/Slider.cs" Line="1" Column="1" />
+      <File FileName="Pustok/Views/Shared/_Layout.cshtml" Line="11" Column="68" />
+      <File FileName="Pustok/Controllers/HomeController.cs" Line="27" Column="6" />
+      <File FileName="Pustok/Migrations/20240422204747_SlidersTableCreated.cs" Line="2" Column="1" />
+      <File FileName="Pustok/ViewModels/HomeViewModel.cs" Line="11" Column="56" />
+      <File FileName="Pustok/Views/Home/Index.cshtml" Line="46" Column="11" />
+      <File FileName="Pustok/Views/_ViewImports.cshtml" Line="1" Column="1" />
       <File FileName="Pustok/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Pustok/Models/Genre.cs" Line="15" Column="1" />
+      <File FileName="Pustok/Models/BaseEntity.cs" Line="8" Column="50" />
+      <File FileName="Pustok/Models/Author.cs" Line="11" Column="45" />
+      <File FileName="Pustok/Models/Tag.cs" Line="6" Column="41" />
+      <File FileName="Pustok/Models/Book.cs" Line="31" Column="2" />
+      <File FileName="Pustok/Models/BookImage.cs" Line="10" Column="23" />
+      <File FileName="Pustok/Migrations/AppDbContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="Pustok/Views/Shared/_BookTabContentPartial.cshtml" Line="31" Column="45" />
+      <File FileName="Pustok/Migrations/20240424121459_AnnotationsAddedIntoBooks.cs" Line="1" Column="1" />
+      <File FileName="Pustok/Migrations/20240424121314_BooksTableCreated.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Pustok" expanded="True">
+          <Node name="Pustok">
             <Node name="Pustok">
-              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
               <Node name="Views">
-                <Node name="Home">
+                <Node name="Home" expanded="True">
                   <Node name="Index.cshtml" selected="True" />
                 </Node>
-                <Node name="Shared" expanded="True" />
               </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -40,9 +47,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Pustok PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
