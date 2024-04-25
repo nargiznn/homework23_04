@@ -413,6 +413,10 @@
       "PackagePath": "staticwebassets/js/custom.js"
     },
     {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/js/main.js",
+      "PackagePath": "staticwebassets/js/main.js"
+    },
+    {
       "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/js/plugins.js",
       "PackagePath": "staticwebassets/js/plugins.js"
     },

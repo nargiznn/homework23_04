@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fl5UsrAwI/J8Z4xCBCIMErcBR72uHcZioOlE8yN1/cg=",
+  "Hash": "qYmXYNT2e8fdQEaseLPzgVTPROg7HDVC6ROVYKauJC4=",
   "Source": "Pustok",
   "BasePath": "_content/Pustok",
   "Mode": "Default",
@@ -1783,6 +1783,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/custom.js"
+    },
+    {
+      "Identity": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/js/main.js",
+      "SourceId": "Pustok",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/",
+      "BasePath": "_content/Pustok",
+      "RelativePath": "js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/main.js"
     },
     {
       "Identity": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/js/plugins.js",

@@ -9,10 +9,15 @@ namespace Pustok.Controllers;
 
 public class HomeController : Controller
 {
-    private AppDbContext _context;
-    public HomeController(AppDbContext context)
-    {
+    private readonly AppDbContext _context;
+    private readonly CountService countService;
+    private readonly CountManageService countManageService;
+
+    public HomeController(AppDbContext context, CountService countService, CountManageService countManageService)
+    { 
         _context = context;
+        countService = countService;
+        this.countManageService = countManageService;
     }
     public IActionResult Index()
     {
@@ -24,6 +29,17 @@ public class HomeController : Controller
             DiscountedBooks = _context.Books.Include(x => x.Author).Include(x => x.BookImages.Where(bi => bi.Status != null)).Where(x => x.DiscountPercent > 0).OrderByDescending(x => x.DiscountPercent).Take(10).ToList(),
         };
         return View(homeVM);
+    }
+
+
+    public IActionResult Add()
+    {
+        countService.Add();
+        countManageService.Add();
+   
+
+
+        return Json(new { count = countManageService.Count });
     }
 }
 

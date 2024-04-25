@@ -65,4 +65,8 @@
 /Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/obj/Debug/net6.0/Pustok.pdb
 /Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/obj/Debug/net6.0/Pustok.genruntimeconfig.cache
 /Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/obj/Debug/net6.0/ref/Pustok.dll
+/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/bin/Debug/net6.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
 /Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/obj/Debug/net6.0/Pustok.csproj.CopyComplete

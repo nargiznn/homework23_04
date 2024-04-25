@@ -12,12 +12,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.29" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Models\" />
     <None Remove="Data\" />
     <None Remove="ViewModels\" />
     <None Remove="Views\Home\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -25,6 +27,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="wwwroot\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

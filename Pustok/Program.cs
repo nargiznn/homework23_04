@@ -1,14 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Pustok;
 using Pustok.Data;
+using Pustok.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
 builder.Services.AddDbContext<AppDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+builder.Services.AddScoped<LayoutService>();
+builder.Services.AddScoped<CountService>();
+builder.Services.AddScoped<CountManageService>();
 
 var app = builder.Build();
 
