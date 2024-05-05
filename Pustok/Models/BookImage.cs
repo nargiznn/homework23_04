@@ -1,16 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Pustok.Models
 {
-	public class BookImage:BaseEntity
-	{
+   public class BookImage : BaseEntity
+    {
         [Required]
-        [MaxLength(255)]
-        public string? Name { get; set; }
+        [MaxLength(250)]
+        public string Name { get; set; }
         public int BookId { get; set; }
         public bool? Status { get; set; }
         public Book? Book { get; set; }
     }
 }
-

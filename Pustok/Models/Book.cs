@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pustok.Models
 {
-	public class Book:BaseEntity
-	{
+    public class Book : AuditEntity
+    {
         public int GenreId { get; set; }
         public int AuthorId { get; set; }
         [MaxLength(50)]
-        [MinLength(10)]
+        [MinLength(4)]
         public string Name { get; set; }
         [MaxLength(500)]
         public string? Desc { get; set; }
@@ -25,8 +26,7 @@ namespace Pustok.Models
         public bool IsFeatured { get; set; }
         public Genre? Genre { get; set; }
         public Author? Author { get; set; }
-        public List<BookImage> BookImages { get; set; }
+        public List<BookImage>? BookImages { get; set; }
 
     }
 }
-

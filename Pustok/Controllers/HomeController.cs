@@ -36,9 +36,6 @@ public class HomeController : Controller
     {
         countService.Add();
         countManageService.Add();
-   
-
-
         return Json(new { count = countManageService.Count });
     }
 }

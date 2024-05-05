@@ -20,6 +20,8 @@
     <None Remove="ViewModels\" />
     <None Remove="Views\Home\" />
     <None Remove="Services\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Manage\Views\Author\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -28,6 +30,8 @@
     <Folder Include="wwwroot\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Services\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Manage\Views\Author\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

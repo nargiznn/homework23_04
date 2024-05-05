@@ -29,8 +29,7 @@ namespace Pustok.Controllers
         {
             countService.Add();
             countManageService.Add();
-            countManageService.Add();
-
+            countManageService.Add(); 
 
             return Json(new { count = countService.Count });
         }
