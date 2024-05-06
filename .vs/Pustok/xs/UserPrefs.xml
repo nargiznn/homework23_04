@@ -1,7 +1,9 @@
 ﻿<Properties StartupConfiguration="{8489858C-B9C0-447D-A7A2-AB89DF24F2FC}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pustok/Models/Book.cs">
+  <MonoDevelop.Ide.ItemProperties.Pustok PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pustok/Areas/Manage/Controllers/GenreController.cs">
     <Files>
-      <File FileName="Pustok/Areas/Manage/Controllers/GenreController.cs" />
+      <File FileName="Pustok/Areas/Manage/Controllers/GenreController.cs" Line="1" Column="1" />
       <File FileName="Pustok/Areas/Manage/Views/Genre/Create.cshtml" />
       <File FileName="Pustok/Models/Genre.cs" />
       <File FileName="Pustok/Models/AuditEntity.cs" />
@@ -17,28 +19,27 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Pustok" expanded="True">
+          <Node name="Pustok">
             <Node name="Pustok" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="Manage" expanded="True">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers" expanded="True">
+                    <Node name="GenreController.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
-              <Node name="Models" expanded="True">
-                <Node name="Book.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Pustok PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <Debugger.DebugSourceFolders />
 </Properties>

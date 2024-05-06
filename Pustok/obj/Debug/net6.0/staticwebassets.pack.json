@@ -469,6 +469,10 @@
       "PackagePath": "staticwebassets/manage/assets/js/demo/datatables-demo.js"
     },
     {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/manage/assets/js/main.js",
+      "PackagePath": "staticwebassets/manage/assets/js/main.js"
+    },
+    {
       "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/manage/assets/js/sb-admin-2.js",
       "PackagePath": "staticwebassets/manage/assets/js/sb-admin-2.js"
     },
@@ -7747,6 +7751,58 @@
     {
       "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/manage/assets/vendor/jquery/jquery.slim.min.map",
       "PackagePath": "staticwebassets/manage/assets/vendor/jquery/jquery.slim.min.map"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-1.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-1.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-10.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-10.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-11.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-11.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-12.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-12.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-13.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-13.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-2.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-2.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-3.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-3.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-4.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-4.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-5.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-5.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-6.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-6.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-7.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-7.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-8.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-8.jpg"
+    },
+    {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/uploads/book/product-9.jpg",
+      "PackagePath": "staticwebassets/uploads/book/product-9.jpg"
     },
     {
       "Id": "obj/Debug/net6.0/staticwebassets/msbuild.Pustok.Microsoft.AspNetCore.StaticWebAssets.props",

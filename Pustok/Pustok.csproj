@@ -32,8 +32,10 @@
     <Folder Include="Services\" />
     <Folder Include="Areas\" />
     <Folder Include="Areas\Manage\Views\Author\" />
+    <Folder Include="wwwroot\uploads\slider\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\uploads\slider\" />
   </ItemGroup>
 </Project>

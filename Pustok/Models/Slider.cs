@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Pustok.Attributes.ValidationAttributes;
 
 namespace Pustok.Models
 {
@@ -17,10 +18,10 @@ namespace Pustok.Models
         public string? BtnUrl { get; set; }
         [MaxLength(100)]
         public string? ImageName { get; set; }
-        //[NotMapped]
-        //[MaxSize(1024 * 1024 * 2)]
-        //[AllowedFileTypes("image/png", "image/jpeg")]
-        //public IFormFile? ImageFile { get; set; }
+        [NotMapped]
+        [MaxSize(1024 * 1024 * 2)]
+        [AllowedFileTypes("image/png", "image/jpeg")]
+        public IFormFile? ImageFile { get; set; }
         public int Order { get; set; }
     }
 }

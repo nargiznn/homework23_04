@@ -1,87 +1,94 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using Pustok.Areas.Manage.ViewModels;
-//using Pustok.Data;
-//using Pustok.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Pustok.Areas.Manage.ViewModels;
+using Pustok.Data;
+using Pustok.Models;
 
-//namespace Pustok.Areas.Manage.Controllers
-//{
-//    [Area("manage")]
-//    public class AuthorController : Controller
-//    {
-//        private readonly AppDbContext _context;
+namespace Pustok.Areas.Manage.Controllers
+{
+    [Area("manage")]
+    public class BookController : Controller
+    {
+        private readonly AppDbContext _context;
+        public BookController(AppDbContext context)
+        {
+            _context = context;
+        }
+        public IActionResult Index(int page = 1)
+        {
+            var query = _context.Books.Include(x => x.Author).Include(x => x.Genre).Include(x => x.BookImages.Where(x => x.Status == true)).OrderByDescending(x => x.Id);
 
-//        public AuthorController(AppDbContext context)
-//        {
-//            _context = context;
-//        }
-//        public IActionResult Index(int page = 1)
-//        {
-//            var query = _context.Authors.Include(x => x.Books);
-//            return View(PaginatedList<Author>.Create(query, page, 2));
-//        }
+            return View(PaginatedList<Book>.Create(query, page, 2));
+        }
+        public IActionResult Create()
+        {
+            ViewBag.Authors = _context.Authors.ToList();
+            ViewBag.Genres = _context.Genres.ToList();
 
-//        public IActionResult Create()
-//        {
-//            return View();
-//        }
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Book book)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Authors = _context.Authors.ToList();
+                ViewBag.Genres = _context.Genres.ToList();
 
-//        [HttpPost]
-//        public IActionResult Create(Author author)
-//        {
-//            if (!ModelState.IsValid)
-//            {
-//                return View(author);
-//            }
+                return View(book);
+            }
 
-//            if (_context.Authors.Any(x => x.Fullname == author.Fullname))
-//            {
-//                ModelState.AddModelError("Name", "Author already exists!");
-//                return View(author);
-//            }
+            if (!_context.Authors.Any(x => x.Id == book.AuthorId))
+                return RedirectToAction("notfound", "error");
 
-//            _context.Authors.Add(author);
-//            _context.SaveChanges();
+            if (!_context.Genres.Any(x => x.Id == book.GenreId))
+                return RedirectToAction("notfound", "error");
 
-//            return RedirectToAction("index");
-//        }
+            _context.Books.Add(book);
+            _context.SaveChanges();
 
-//        public IActionResult Edit(int id)
-//        {
-//            Author author = _context.Authors.Find(id);
+            return RedirectToAction("index");
+        }
+        public IActionResult Edit(int id)
+        {
+            Book book = _context.Books.Find(id);
 
-//            if (author == null) return RedirectToAction("Error", "NotFound");
+            if (book == null) return RedirectToAction("notfound", "error");
 
-//            return View(author);
-//        }
 
-//        [HttpPost]
-//        public IActionResult Edit(Author author)
-//        {
-//            if (!ModelState.IsValid)
-//            {
-//                return View(author);
-//            }
-//            Author existAuthor = _context.Authors.Find(author.Id);
-//            if (existAuthor == null) return RedirectToAction("Error", "NotFound");
-//            if (_context.Authors.Any(x => x.Fullname == author.Fullname))
-//            {
-//                ModelState.AddModelError("Name", "Author already exists!");
-//                return View(author);
-//            }
-//            existAuthor.Fullname = author.Fullname;
-//            _context.SaveChanges();
-//            return RedirectToAction("index");
-//        }
+            ViewBag.Authors = _context.Authors.ToList();
+            ViewBag.Genres = _context.Genres.ToList();
 
-//        public IActionResult Delete(int id)
-//        {
-//            if (id <= 0) return RedirectToAction("Error", "NotFound");
-//            Author? deleteAuthor = _context.Authors.FirstOrDefault(x => x.Id == id);
-//            if (deleteAuthor == null) return RedirectToAction("Error", "NotFound");
-//            _context.Authors.Remove(deleteAuthor);
-//            _context.SaveChanges();
-//            return RedirectToAction("index");
-//        }
-//    }
-//}
+            return View(book);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Book book)
+        {
+            Book? existBook = _context.Books.Find(book.Id);
+            if (existBook == null) return RedirectToAction("notfound", "error");
+
+
+            if (book.AuthorId != existBook.AuthorId && !_context.Authors.Any(x => x.Id == book.AuthorId))
+                return RedirectToAction("notfound", "error");
+
+            if (book.GenreId != existBook.GenreId && !_context.Genres.Any(x => x.Id == book.GenreId))
+                return RedirectToAction("notfound", "error");
+
+            existBook.Name = book.Name;
+            existBook.Desc = book.Desc;
+            existBook.SalePrice = book.SalePrice;
+            existBook.CostPrice = book.CostPrice;
+            existBook.DiscountPercent = book.DiscountPercent;
+            existBook.IsNew = book.IsNew;
+            existBook.IsFeatured = book.IsFeatured;
+            existBook.StockStatus = book.StockStatus;
+
+            existBook.ModifiedAt = DateTime.UtcNow;
+
+            _context.SaveChanges();
+
+            return RedirectToAction("index");
+        }
+    }
+}

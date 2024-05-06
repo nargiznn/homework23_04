@@ -47,10 +47,11 @@
                     <span class="text-danger" asp-validation-for="Order"></span>
                 </div>
                 <div class="form-group">
-                    <label for="fileInput">Image</label>
-                    <input asp-for="ImageName" class="form-control" id="fileInput" placeholder=" ">
-                    <img src="~/uploads/slider/@Model.ImageName" width="200"/>
-                    <span class="text-danger" asp-validation-for="ImageName"></span>
+                    <label for="imgInput">Image</label>
+                    <input asp-for="ImageFile" class="form-control" id="imgInput" placeholder=" ">
+                    <input type="hidden" name="ImageName" value="@Model.ImageName" />
+                    <img width="200" id="previewImg" src="~/uploads/slider/@Model.ImageName" />
+                    <span class="text-danger" asp-validation-for="ImageFile"></span>
                 </div>
                 <button class="btn btn-primary" type="submit">
                     Edit Slider
