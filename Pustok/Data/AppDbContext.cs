@@ -17,6 +17,13 @@ namespace Pustok.Data
         public DbSet<Book> Books { get; set; }
         public DbSet<BookImage> BookImages { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<BookTag> BookTags { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<BookTag>().HasKey(x => new { x.BookId, x.TagId });
+        }
 
     }
 }

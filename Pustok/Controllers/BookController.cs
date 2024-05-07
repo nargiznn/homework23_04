@@ -15,8 +15,8 @@ namespace Pustok.Controllers
         public BookController(AppDbContext context, CountService countService, CountManageService countManageService)
         {
             _context = context;
-
-           
+            this.countService = countService;
+            this.countManageService = countManageService;
         }
         public IActionResult GetBookById(int id)
         {
@@ -28,12 +28,15 @@ namespace Pustok.Controllers
         public IActionResult Add()
         {
             countService.Add();
+            countService.Add();
+            countService.Add();
+
             countManageService.Add();
-            countManageService.Add(); 
+            countManageService.Add();
+
 
             return Json(new { count = countService.Count });
         }
     }
-
 }
 

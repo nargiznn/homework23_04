@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sQrgKyfwv3clPC2OiT1HDYwWs28kvV3MooOj2HjccfY=",
+  "Hash": "klRKNad6CxNq9WSLWKIGP5xLzykivXCreV3cRkkQbcw=",
   "Source": "Pustok",
   "BasePath": "_content/Pustok",
   "Mode": "Default",
@@ -1851,6 +1851,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/manage/assets/css/sb-admin-2.min.css"
+    },
+    {
+      "Identity": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/manage/assets/css/style.css",
+      "SourceId": "Pustok",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/",
+      "BasePath": "_content/Pustok",
+      "RelativePath": "manage/assets/css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/manage/assets/css/style.css"
     },
     {
       "Identity": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/manage/assets/img/undraw_posting_photo.svg",

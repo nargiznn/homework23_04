@@ -429,6 +429,10 @@
       "PackagePath": "staticwebassets/manage/assets/css/sb-admin-2.min.css"
     },
     {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/manage/assets/css/style.css",
+      "PackagePath": "staticwebassets/manage/assets/css/style.css"
+    },
+    {
       "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/manage/assets/img/undraw_posting_photo.svg",
       "PackagePath": "staticwebassets/manage/assets/img/undraw_posting_photo.svg"
     },

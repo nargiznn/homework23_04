@@ -19,7 +19,16 @@ builder.Services.AddScoped<CountService>();
 builder.Services.AddScoped<CountManageService>();
 
 var app = builder.Build();
-
+//builder.Services.AddSession(opt =>
+//{
+//    opt.IdleTimeout = TimeSpan.FromSeconds(5);
+//});
+//builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession(opt =>
+{
+    opt.IdleTimeout = TimeSpan.FromSeconds(5);
+});
+builder.Services.AddHttpContextAccessor();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -27,6 +36,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+app.UseSession();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

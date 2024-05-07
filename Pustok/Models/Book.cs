@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Pustok.Attributes.ValidationAttributes;
 
 namespace Pustok.Models
 {
@@ -26,7 +27,20 @@ namespace Pustok.Models
         public bool IsFeatured { get; set; }
         public Genre? Genre { get; set; }
         public Author? Author { get; set; }
-        public List<BookImage>? BookImages { get; set; }
+        [NotMapped]
+        [MaxSize(2 * 1024 * 1024)]
+        [AllowedFileTypes("image/png", "image/jpeg")]
+        public IFormFile? PosterFile { get; set; }
+        [NotMapped]
+        [MaxSize(2 * 1024 * 1024)]
+        [AllowedFileTypes("image/png", "image/jpeg")]
+        public List<IFormFile>? ImageFiles { get; set; } = new List<IFormFile>();
+        public List<BookImage>? BookImages { get; set; } = new List<BookImage>();
+        public List<BookTag> BookTags { get; set; } = new List<BookTag>();
+        [NotMapped]
+        public List<int>? TagIds { get; set; } = new List<int>();
+        [NotMapped]
+        public List<int>? BookImageIds { get; set; } = new List<int>();
 
     }
 }

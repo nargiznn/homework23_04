@@ -7,7 +7,7 @@
             string newFileName = Guid.NewGuid().ToString() + file.FileName;
             string path = Path.Combine(root, folder, newFileName);
 
-            using(FileStream fs = new FileStream(path, FileMode.Create))
+            using (FileStream fs = new FileStream(path, FileMode.Create))
             {
                 file.CopyTo(fs);
             }
@@ -15,7 +15,7 @@
             return newFileName;
         }
 
-        public static bool Delete(string root, string folder,string fileName)
+        public static bool Delete(string root, string folder, string fileName)
         {
             string path = Path.Combine(root, folder, fileName);
 
