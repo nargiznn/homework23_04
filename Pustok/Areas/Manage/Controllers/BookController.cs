@@ -5,7 +5,9 @@ using Pustok.Data;
 using Pustok.Helpers;
 using Pustok.Models;
 
-[Area("manage")]
+namespace Pustok.Areas.Manage.Controllers
+{
+    [Area("manage")]
 public class BookController : Controller
 {
     private readonly AppDbContext _context;
@@ -19,7 +21,7 @@ public class BookController : Controller
 
     public IActionResult setSession()
     {
-        HttpContext.Session.SetString("name", "Nargiz");
+        HttpContext.Session.SetString("name", "Abbas");
         return Content("");
     }
 
@@ -33,7 +35,7 @@ public class BookController : Controller
         CookieOptions option = new CookieOptions();
         option.Expires = DateTime.Now.AddMinutes(10);
 
-        HttpContext.Response.Cookies.Append("name", "Nargiz", option);
+        HttpContext.Response.Cookies.Append("name", "Hikmet", option);
         return Content("");
     }
 
@@ -43,7 +45,7 @@ public class BookController : Controller
     }
     public IActionResult Index(int page = 1)
     {
-        var query = _context.Books.Include(x => x.Author).Include(x => x.Genre).Include(x => x.BookImages.Where(x => x.Status == true)).OrderByDescending(x => x.Id);
+        var query = _context.Books.Include(x => x.Author).Include(x => x.Genre).Include(x => x.BookImages.Where(x => x.Status == true)).Where(x => !x.IsDeleted).OrderByDescending(x => x.Id);
 
         return View(PaginatedList<Book>.Create(query, page, 2));
     }
@@ -160,7 +162,15 @@ public class BookController : Controller
         if (book.PosterFile != null)
         {
             BookImage poster = existBook.BookImages.FirstOrDefault(x => x.Status == true);
-            removedFileNames.Add(poster.Name);
+            if (poster == null)
+            {
+                poster = new BookImage();
+                existBook.BookImages.Add(poster);
+            }
+            else
+                removedFileNames.Add(poster.Name);
+
+
             poster.Name = FileManager.Save(book.PosterFile, _env.WebRootPath, "uploads/book");
         }
 
@@ -198,5 +208,35 @@ public class BookController : Controller
         return RedirectToAction("index");
     }
 
+    public IActionResult Delete(int id)
+    {
+        Book book = _context.Books
+            .Include(x => x.BookImages)
+            .Include(x => x.BookTags).ThenInclude(bt => bt.Tag)
+            .Include(x => x.Author)
+            .Include(x => x.Genre)
+            .FirstOrDefault(x => x.Id == id && !x.IsDeleted);
+
+        if (book == null) return RedirectToAction("notfound", "error");
+
+        return View(book);
+    }
+
+    [HttpPost]
+    public IActionResult Delete(Book book)
+    {
+        Book existBook = _context.Books.FirstOrDefault(x => x.Id == book.Id && !x.IsDeleted);
+
+        if (existBook == null) return RedirectToAction("notfound", "error");
+
+        existBook.IsDeleted = true;
+        existBook.ModifiedAt = DateTime.UtcNow;
+        _context.SaveChanges();
+
+        return RedirectToAction("index");
+    }
+
+
+}
 
 }

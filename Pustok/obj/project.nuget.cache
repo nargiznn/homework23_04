@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Di4D6/fclwyZ2Md4WJG2vtIk7S8yWoSLAgwYv4/2LAZpgrDLkF1yzpLI0qk1nS5nrsnc9REMNPPOWMENzDY91g==",
+  "dgSpecHash": "4lmSLtUcFOk/+3+fLnNsdJoMRfVUlTQGWdWfXR52ni+CwjrRH6to0m0QyxQkdOVlFks4NCq5zlumFD9f6fgCpg==",
   "success": true,
   "projectFilePath": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Pustok.csproj",
   "expectedPackageFiles": [
     "/Users/nergiznadirli/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.29/microsoft.aspnetcore.cryptography.internal.6.0.29.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.29/microsoft.aspnetcore.cryptography.keyderivation.6.0.29.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/6.0.29/microsoft.aspnetcore.identity.entityframeworkcore.6.0.29.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.aspnetcore.jsonpatch/6.0.29/microsoft.aspnetcore.jsonpatch.6.0.29.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/6.0.29/microsoft.aspnetcore.mvc.newtonsoftjson.6.0.29.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
@@ -22,6 +25,8 @@
     "/Users/nergiznadirli/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.1/microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microsoft.extensions.identity.core/6.0.29/microsoft.extensions.identity.core.6.0.29.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microsoft.extensions.identity.stores/6.0.29/microsoft.extensions.identity.stores.6.0.29.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",

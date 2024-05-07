@@ -1,11 +1,12 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Pustok.Models;
 
 namespace Pustok.Data
 {
-	public class AppDbContext:DbContext
-	{
+	public class AppDbContext: IdentityDbContext
+    {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
@@ -18,11 +19,12 @@ namespace Pustok.Data
         public DbSet<BookImage> BookImages { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Tag> Tags { get; set; }
-        public DbSet<BookTag> BookTags { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BookTag>().HasKey(x => new { x.BookId, x.TagId });
+            base.OnModelCreating(modelBuilder);
         }
 
     }

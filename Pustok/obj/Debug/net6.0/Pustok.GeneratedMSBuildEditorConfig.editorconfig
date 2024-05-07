@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Areas/Manage/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL0FjY291bnQvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Areas/Manage/Views/Author/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL0F1dGhvci9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Areas/Manage/Views/Book/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL0Jvb2svQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Areas/Manage/Views/Book/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL0Jvb2svRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Areas/Manage/Views/Book/Edit.cshtml]
