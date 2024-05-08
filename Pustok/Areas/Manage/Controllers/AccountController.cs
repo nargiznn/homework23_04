@@ -25,15 +25,16 @@ namespace Pustok.Areas.Manage.Controllers
             };
 
             var r = await _userManager.CreateAsync(admin, "Admin123");
+
             return Json(r);
         }
         public IActionResult Login()
         {
             return View();
         }
-          
+
         [HttpPost]
-        public async Task<IActionResult> Login(AdminLoginViewModel loginVM)
+        public async Task<IActionResult> Login(AdminLoginViewModel loginVM, string returnUrl)
         {
             AppUser admin = await _userManager.FindByNameAsync(loginVM.UserName);
 
@@ -44,7 +45,7 @@ namespace Pustok.Areas.Manage.Controllers
             }
 
 
-            var result = await _signInManager.PasswordSignInAsync(admin, loginVM.Password,false,false);
+            var result = await _signInManager.PasswordSignInAsync(admin, loginVM.Password, false, false);
 
             if (!result.Succeeded)
             {
@@ -53,9 +54,8 @@ namespace Pustok.Areas.Manage.Controllers
             }
 
 
-            return RedirectToAction("index", "dashboard");
+            return returnUrl != null ? Redirect(returnUrl) : RedirectToAction("index", "dashboard");
         }
-
         public IActionResult GetName()
         {
             var username = User.Identity.Name;
