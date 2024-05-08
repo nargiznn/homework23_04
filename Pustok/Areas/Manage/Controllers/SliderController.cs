@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Pustok.Areas.Manage.ViewModels;
 using Pustok.Data;
@@ -7,6 +8,7 @@ using Pustok.Models;
 
 namespace Pustok.Areas.Manage.Controllers
 {
+    [Authorize]
     [Area("manage")]
     public class SliderController : Controller
     {

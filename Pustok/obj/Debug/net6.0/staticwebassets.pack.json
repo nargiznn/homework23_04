@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/Pustok.bundle.scp.css"
     },
     {
+      "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/wwwroot/css/main.css",
       "PackagePath": "staticwebassets/css/main.css"
     },

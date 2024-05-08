@@ -1,18 +1,11 @@
 ﻿<Properties StartupConfiguration="{8489858C-B9C0-447D-A7A2-AB89DF24F2FC}|Default">
-  <MonoDevelop.Ide.ItemProperties.Pustok PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
+  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pustok/Areas/Manage/Views/Book/Edit.cshtml">
-    <Files>
-      <File FileName="Pustok/Areas/Manage/Controllers/BookController.cs" Line="16" Column="43" />
-      <File FileName="Pustok/Models/Book.cs" Line="41" Column="66" />
-      <File FileName="Pustok/Areas/Manage/Views/Book/Create.cshtml" Line="1" Column="1" />
-      <File FileName="Pustok/wwwroot/manage/assets/js/main.js" Line="62" Column="3" />
-      <File FileName="Pustok/Areas/Manage/Views/Book/Edit.cshtml" Line="27" Column="30" />
-    </Files>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -20,23 +13,27 @@
             <Node name="Pustok">
               <Node name="Areas">
                 <Node name="Manage">
-                  <Node name="Controllers" expanded="True" />
                   <Node name="ViewModels" expanded="True" />
-                  <Node name="Views">
-                    <Node name="Book">
-                      <Node name="Edit.cshtml" selected="True" />
-                    </Node>
+                  <Node name="Views" expanded="True">
+                    <Node name="Account" expanded="True" />
+                    <Node name="Book" expanded="True" />
                     <Node name="Genre" expanded="True" />
                     <Node name="Shared" expanded="True" />
                     <Node name="Slider" expanded="True" />
                   </Node>
                 </Node>
               </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="wwwroot" expanded="True">
                 <Node name="manage" expanded="True">
                   <Node name="assets" expanded="True">
+                    <Node name="css" expanded="True">
+                      <Node name="sb-admin-2.css" expanded="True" />
+                    </Node>
                     <Node name="js" expanded="True" />
                   </Node>
                 </Node>
@@ -48,8 +45,11 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <Debugger.DebugSourceFolders />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Pustok PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

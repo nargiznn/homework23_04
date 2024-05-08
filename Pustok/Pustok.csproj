@@ -23,6 +23,7 @@
     <None Remove="Services\" />
     <None Remove="Areas\" />
     <None Remove="Areas\Manage\Views\Author\" />
+    <None Remove="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -34,6 +35,7 @@
     <Folder Include="Areas\" />
     <Folder Include="Areas\Manage\Views\Author\" />
     <Folder Include="wwwroot\uploads\slider\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
