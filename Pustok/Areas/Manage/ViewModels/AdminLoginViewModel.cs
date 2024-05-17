@@ -12,6 +12,7 @@ namespace Pustok.Areas.Manage.ViewModels
         [MinLength(8)]
         [MaxLength(25)]
         [DataType(DataType.Password)]
-        public string Password { get; set; }    
+        public string Password { get; set; }
+        public bool RememberMe { get; set; }
     }
 }

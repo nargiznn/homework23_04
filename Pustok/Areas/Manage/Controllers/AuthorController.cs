@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using System.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pustok.Areas.Manage.ViewModels;
 using Pustok.Data;
@@ -6,6 +8,7 @@ using Pustok.Models;
 
 namespace Pustok.Areas.Manage.Controllers
 {
+    [Authorize(Roles = "admin,super_admin")]
     [Area("manage")]
     public class AuthorController : Controller
     {

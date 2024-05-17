@@ -41,6 +41,6 @@ namespace Pustok.Models
         public List<int>? TagIds { get; set; } = new List<int>();
         [NotMapped]
         public List<int>? BookImageIds { get; set; } = new List<int>();
-
+        public List<BookReview> BookReviews { get; set; }
     }
 }

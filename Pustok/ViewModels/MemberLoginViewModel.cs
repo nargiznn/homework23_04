@@ -5,11 +5,14 @@ namespace Pustok.ViewModels
 {
     public class MemberLoginViewModel
     {
-        [Required(ErrorMessage = "Email is required")]
-        [EmailAddress(ErrorMessage = "Invalid email format")]
+        [MaxLength(25)]
+        [MinLength(5)]
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "Password is required")]
+        [MaxLength(25)]
+        [MinLength(8)]
+        [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 

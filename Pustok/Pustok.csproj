@@ -24,7 +24,9 @@
     <None Remove="Areas\" />
     <None Remove="Areas\Manage\Views\Author\" />
     <None Remove="Views\Account\" />
-    <None Remove="Views\Profile\" />
+    <None Remove="Views\Book\" />
+    <None Remove="Models\Enum\" />
+    <None Remove="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -37,7 +39,9 @@
     <Folder Include="Areas\Manage\Views\Author\" />
     <Folder Include="wwwroot\uploads\slider\" />
     <Folder Include="Views\Account\" />
-    <Folder Include="Views\Profile\" />
+    <Folder Include="Views\Book\" />
+    <Folder Include="Models\Enum\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

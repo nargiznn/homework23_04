@@ -38,5 +38,19 @@ public class HomeController : Controller
         countManageService.Add();
         return Json(new { count = countManageService.Count });
     }
+    //public IActionResult Detail(int id)
+    //{
+    //    Book book = _context.Books.Include(x => x.Genre).Include(x => x.BookImages.Where(x => x.Status == true)).FirstOrDefault(x => x.Id == id);
+    //    //Book book = _context.Books.Include(x => x.Author).Include(x => x.Genre).Include(x => x.BookTags).FirstOrDefault(x => x.Id == id);
+    //    return View(book);
+
+       
+    //}
+
+    
+
+
+
+
 }
 

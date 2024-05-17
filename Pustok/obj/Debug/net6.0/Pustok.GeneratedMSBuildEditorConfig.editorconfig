@@ -100,24 +100,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Qcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Book/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9EZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Profile/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsZS9JbmRleC5jc2h0bWw=
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Order/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Shared/_BookModalContentPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Cb29rTW9kYWxDb250ZW50UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Shared/_BookModalPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Cb29rTW9kYWxQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Shared/_BookReviewFormPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Cb29rUmV2aWV3Rm9ybVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Shared/_BookTabContentPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Cb29rVGFiQ29udGVudFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Shared/_OrderCreateFormPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19PcmRlckNyZWF0ZUZvcm1QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Shared/_ProfileEditFormPartical.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Qcm9maWxlRWRpdEZvcm1QYXJ0aWNhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/Shared/_ValidationScriptPartials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0UGFydGlhbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/nergiznadirli/Desktop/Pustok/Pustok/Pustok/Views/_ViewImports.cshtml]

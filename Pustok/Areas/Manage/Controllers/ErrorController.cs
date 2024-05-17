@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Pustok.Areas.Manage.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "admin,super_admin")]
     [Area("manage")]
     public class ErrorController : Controller
     {

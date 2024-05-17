@@ -20,7 +20,10 @@ namespace Pustok.Data
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
-
+        public DbSet<BookReview> BookReviews { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BookTag>().HasKey(x => new { x.BookId, x.TagId });

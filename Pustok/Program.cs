@@ -20,11 +20,13 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.Password.RequireNonAlphanumeric = false;
     opt.Password.RequireUppercase = false;
     opt.Password.RequiredLength = 8;
-    opt.User.RequireUniqueEmail = true;
+    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(20);
+    opt.Lockout.MaxFailedAccessAttempts = 5;
 }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddScoped<LayoutService>();
 builder.Services.AddScoped<CountService>();
 builder.Services.AddScoped<CountManageService>();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddSession(opt =>
 {
@@ -41,6 +43,12 @@ builder.Services.ConfigureApplicationCookie(opt =>
             var uri = new Uri(context.RedirectUri);
             context.Response.Redirect("/manage/account/login" + uri.Query);
         }
+        else
+        {
+            var uri = new Uri(context.RedirectUri);
+            context.Response.Redirect("/account/login" + uri.Query);
+        }
+
         return Task.CompletedTask;
     };
 });

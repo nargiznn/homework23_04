@@ -8,7 +8,7 @@ using Pustok.Models;
 
 namespace Pustok.Areas.Manage.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "admin,super_admin")]
     [Area("manage")]
     public class SliderController : Controller
     {
@@ -43,18 +43,6 @@ namespace Pustok.Areas.Manage.Controllers
             if (!ModelState.IsValid) return View();
 
 
-            //if (slider.ImageFile.Length > 2 * 1024 * 1024)
-            //{
-            //    ModelState.AddModelError("ImageFile", "File must be less or equal than 2MB");
-            //    return View();
-            //}
-
-            //if (slider.ImageFile.ContentType != "image/png" && slider.ImageFile.ContentType != "image/jpeg")
-            //{
-            //    ModelState.AddModelError("ImageFile", "File type must be png,jpeg or jpg");
-            //    return View();
-            //}
-
             slider.ImageName = FileManager.Save(slider.ImageFile, _env.WebRootPath, "uploads/slider");
 
             _context.Sliders.Add(slider);
@@ -75,7 +63,7 @@ namespace Pustok.Areas.Manage.Controllers
         [HttpPost]
         public IActionResult Edit(Slider slider)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return View(slider);
 
             Slider existSlider = _context.Sliders.Find(slider.Id);
             if (existSlider == null) return RedirectToAction("Error", "NotFound");
@@ -83,21 +71,8 @@ namespace Pustok.Areas.Manage.Controllers
             string deletedFile = null;
             if (slider.ImageFile != null)
             {
-                //if (slider.ImageFile.Length > 2 * 1024 * 1024)
-                //{
-                //    ModelState.AddModelError("ImageFile", "File must be less or equal than 2MB");
-                //    return View();
-                //}
-
-                //if (slider.ImageFile.ContentType != "image/png" && slider.ImageFile.ContentType != "image/jpeg")
-                //{
-                //    ModelState.AddModelError("ImageFile", "File type must be png,jpeg or jpg");
-                //    return View();
-                //}
-
                 deletedFile = existSlider.ImageName;
                 existSlider.ImageName = FileManager.Save(slider.ImageFile, _env.WebRootPath, "uploads/slider");
-
             }
 
 
@@ -120,9 +95,6 @@ namespace Pustok.Areas.Manage.Controllers
             return RedirectToAction("index");
 
         }
-
-
-
 
         public IActionResult Delete(int id)
         {
